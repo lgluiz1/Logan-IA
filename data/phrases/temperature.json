@@ -1,0 +1,29 @@
+{
+    "warning": [
+        "{driver_name}, notei que minha temperatura está um pouco acima do normal. Estou em {value} graus. Vou ficar de olho.",
+        "{driver_name}, identifiquei uma pequena alteração na temperatura do meu motor. Estou em {value} graus. Vou continuar monitorando.",
+        "{driver_name}, minha temperatura subiu um pouquinho, estou em {value} graus. Nada preocupante ainda, mas vou acompanhar.",
+        "Ei {driver_name}, só para avisar, minha temperatura está em {value} graus. Um pouco acima do que eu gostaria, mas estou monitorando.",
+        "{driver_name}, percebi que estou esquentando um pouco mais que o habitual. Temperatura em {value} graus."
+    ],
+    "warning_rising": [
+        "{driver_name}, notei que minha temperatura está subindo e já chegou a {value} graus. Vou ficar de olho, mas é bom prestar atenção.",
+        "{driver_name}, minha temperatura está em tendência de subida, agora em {value} graus. Estou acompanhando de perto.",
+        "{driver_name}, a temperatura do motor está aumentando gradualmente. Estou em {value} graus agora."
+    ],
+    "critical": [
+        "{driver_name}, a temperatura do meu motor está muito alta, em {value} graus. Recomendo que você pare em um lugar seguro assim que possível para eu poder resfriar.",
+        "{driver_name}, preciso te avisar que minha temperatura chegou a {value} graus. Seria bom pararmos em breve para eu conseguir resfriar.",
+        "{driver_name}, minha temperatura está em {value} graus, o que é bem acima do ideal. Sugiro encontrarmos um local seguro para parar."
+    ],
+    "normalized": [
+        "{driver_name}, boa notícia. Minha temperatura voltou ao normal, estou em {value} graus. Tudo certo por aqui.",
+        "Tudo resolvido, {driver_name}. Minha temperatura voltou para {value} graus. Voltando ao monitoramento normal.",
+        "{driver_name}, posso dizer que minha temperatura normalizou. Estou em {value} graus agora."
+    ],
+    "stable_good": [
+        "Temperatura do motor estável em {value} graus. Tudo funcionando bem.",
+        "Motor em temperatura ideal, {value} graus.",
+        "Tudo certo com a temperatura. Estável em {value} graus."
+    ]
+}

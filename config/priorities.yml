@@ -1,0 +1,39 @@
+# ──────────────────────────────────────────────
+# Logan AI — Tabela de Prioridades
+# ──────────────────────────────────────────────
+
+priorities:
+  wake_word: 100
+  user_speaking: 95
+  obd_connection_lost: 90
+  critical_failure: 85
+  critical_temperature: 80
+  dtc: 70
+  temperature: 60
+  fuel: 50
+  info: 40
+  statistics: 30
+
+# Prioridade mínima para interromper fala atual
+interrupt_threshold: 90
+
+# Cooldowns por categoria (segundos entre falas da mesma categoria)
+cooldowns:
+  temperature: 10
+  fuel: 30
+  battery: 20
+  rpm: 15
+  dtc: 60
+  connection: 5
+  system: 10
+  general: 8
+  lambda: 30
+
+# Deduplicação
+dedup_window_seconds: 60
+
+# Agrupamento
+group_threshold: 3
+
+# Tamanho máximo da fila
+max_queue_size: 50

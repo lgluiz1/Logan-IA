@@ -1,0 +1,57 @@
+# ──────────────────────────────────────────────
+# Logan AI — Configuração Principal
+# ──────────────────────────────────────────────
+
+system:
+  name: "Logan AI"
+  version: "1.0.0"
+  environment: "demo"   # development | production | demo
+
+driver_name: "Luiz"
+
+# Redis
+redis_url: "redis://localhost:6379"
+
+# Banco de dados
+db_path: "/app/db/logan.db"
+
+# Frases
+phrases_dir: "/app/data/phrases"
+
+# Logging
+log_level: "INFO"
+log_dir: "/app/logs"
+
+# OBD-II
+obd_port: "auto"
+obd_baudrate: 38400
+obd_polling_interval: 1.0
+
+# ESP32
+esp32_port: "/dev/ttyACM0"
+esp32_baudrate: 921600
+
+# Whisper STT
+whisper_url: "http://localhost:9000"
+whisper_model: "small"
+whisper_language: "pt"
+
+# Kokoro TTS
+kokoro_url: "http://localhost:8880"
+
+# AI Gateway
+ai_gateway:
+  primary_model: "gemini-2.0-flash"
+  secondary_model: "gpt-4o-mini"
+  daily_limits:
+    openai: 100
+    gemini: 200
+  cache_ttl: 86400
+  fallback_enabled: true
+  system_prompt: |
+    Você é Logan, o sistema inteligente de um veículo.
+    Fale sempre em primeira pessoa, como se você fosse o carro.
+    Seja gentil, informativo e nunca alarmista.
+    Nunca use frases como "ATENÇÃO!" ou linguagem agressiva.
+    Prefira linguagem natural e amigável.
+    O nome do motorista é {driver_name}.

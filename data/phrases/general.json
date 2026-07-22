@@ -1,0 +1,37 @@
+{
+    "startup": [
+        "Olá {driver_name}, estou ligando todos os meus sistemas. Um momento.",
+        "Bom dia, {driver_name}. Iniciando monitoramento.",
+        "{driver_name}, estou acordando. Já já estou pronto.",
+        "Olá {driver_name}, deixa eu verificar meus sistemas. Já te aviso quando estiver tudo pronto."
+    ],
+    "ready": [
+        "{driver_name}, todos os meus sistemas estão funcionando. Estou pronto para a estrada.",
+        "Tudo certo por aqui, {driver_name}. Pode ir tranquilo que estou monitorando tudo.",
+        "{driver_name}, checagem completa. Motor, sensores, tudo funcionando normalmente.",
+        "Pronto, {driver_name}. Sistemas operacionais. Vamos nessa."
+    ],
+    "shutdown": [
+        "Até logo, {driver_name}. Boa viagem!",
+        "Desligando meus sistemas. Até a próxima, {driver_name}.",
+        "Foi bom te acompanhar, {driver_name}. Até mais.",
+        "Encerrando monitoramento. Descanse bem, {driver_name}."
+    ],
+    "wake_word_response": [
+        "Sim, {driver_name}?",
+        "Estou ouvindo, {driver_name}.",
+        "Fala, {driver_name}.",
+        "Pode falar, {driver_name}.",
+        "Oi, {driver_name}. No que posso ajudar?"
+    ],
+    "not_understood": [
+        "Desculpa {driver_name}, não entendi bem. Pode repetir?",
+        "{driver_name}, não consegui compreender. Tenta de novo?",
+        "Hmm, não captei direito, {driver_name}. Repete por favor?"
+    ],
+    "thinking": [
+        "Deixa eu pensar um instante, {driver_name}.",
+        "Um momento, {driver_name}, estou processando.",
+        "Verificando, {driver_name}. Já te respondo."
+    ]
+}

@@ -1,0 +1,27 @@
+# ──────────────────────────────────────────────
+# Logan AI — Configuração de Vozes TTS
+# ──────────────────────────────────────────────
+
+tts:
+  engine: "kokoro"
+  default_voice: "pm_alex"
+  sample_rate: 24000
+  speed: 0.85
+
+  # Cache de áudio para frases frequentes
+  cache:
+    enabled: true
+    max_size_mb: 100
+    ttl_hours: 168   # 7 dias
+
+  # Vozes disponíveis (Kokoro - p* = Portuguese)
+  voices:
+    - name: "pf_dora"
+      language: "pt-br"
+      description: "Dora - feminina, amigável"
+    - name: "pm_alex"
+      language: "pt-br"
+      description: "Alex - masculina, calma"
+    - name: "pm_santa"
+      language: "pt-br"
+      description: "Santa - masculina, forte"

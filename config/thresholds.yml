@@ -1,0 +1,40 @@
+# ──────────────────────────────────────────────
+# Logan AI — Limiares de Alertas OBD (Logan 2018)
+# ──────────────────────────────────────────────
+
+temperature:
+  coolant:
+    normal_min: 82     # Válvula termostática abre
+    normal_max: 98     # Ventoinha liga
+    warning: 102       # Leve superaquecimento
+    critical: 110      # Risco de dano ao motor
+  intake:
+    warning: 55
+    critical: 70
+
+fuel:
+  low_warning: 15.0    # Acende luz de reserva (aprox 7.5L em tanque de 50L)
+  low_critical: 8.0    # Risco de pane seca (aprox 4L)
+
+battery:
+  engine_off_low: 11.5 # Bateria descarregada
+  engine_on_low: 13.0  # Alternador não está carregando
+  high_warning: 15.0   # Regulador de voltagem pifou
+
+rpm:
+  cold_limit: 3500     # Limite seguro enquanto motor estiver frio (< 70°C)
+  high_warning: 5500   # Quase no corte
+  high_critical: 6200  # Corte de giro
+  idle_min: 650
+  idle_max: 950
+
+engine_load:
+  high_warning: 90
+  sustained_high_seconds: 30
+
+throttle:
+  aggressive_threshold: 85
+
+speed:
+  high_warning: 110
+  very_high_warning: 130

@@ -1,0 +1,24 @@
+{
+    "lost": [
+        "{driver_name}... perdi a comunicação com a minha central eletrônica. Ainda não sei o que aconteceu, mas já estou investigando.",
+        "{driver_name}, parece que perdi o contato com minha central. Vou tentar restabelecer a conexão.",
+        "Hmm, {driver_name}, a comunicação com minha central caiu. Estou trabalhando para reconectar.",
+        "{driver_name}, tive um problema na comunicação com a central. Já estou tentando resolver."
+    ],
+    "recovered": [
+        "Consegui restabelecer a comunicação com a minha central. Todos os sistemas voltaram ao monitoramento normal.",
+        "Pronto, {driver_name}, conexão restaurada. Voltei a monitorar tudo normalmente.",
+        "{driver_name}, boa notícia, reconectei com a central. Tudo voltou a funcionar.",
+        "Comunicação restabelecida, {driver_name}. Estou de volta ao monitoramento completo."
+    ],
+    "retrying": [
+        "Ainda tentando reconectar, {driver_name}. Aguarde mais um momento.",
+        "Continuando as tentativas de reconexão, {driver_name}.",
+        "{driver_name}, ainda não consegui, mas estou insistindo na reconexão."
+    ],
+    "failed": [
+        "{driver_name}, infelizmente não consegui restabelecer a conexão com a central. Pode ser necessário verificar o adaptador OBD.",
+        "Não foi possível reconectar, {driver_name}. Recomendo checar se o adaptador OBD está bem conectado.",
+        "{driver_name}, todas as tentativas de reconexão falharam. O adaptador pode estar com algum problema."
+    ]
+}

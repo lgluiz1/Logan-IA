@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logan-ai"
+version = "1.0.0"
+description = "Assistente automotivo inteligente que transforma qualquer veículo OBD-II em um carro inteligente"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    {name = "Logan AI Team"},
+]
+
+dependencies = [
+    # Core
+    "redis[hiredis]>=5.0",
+    "pyyaml>=6.0",
+    "aiohttp>=3.9",
+
+    # OBD
+    "obd>=0.7",
+
+    # Serial (ESP32)
+    "pyserial-asyncio>=0.6",
+
+    # HTTP API
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+
+    # Metrics
+    "prometheus-client>=0.20",
+]
+
+[project.optional-dependencies]
+audio = [
+    "sounddevice>=0.4",
+    "numpy>=1.26",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pytest-cov>=5.0",
+    "ruff>=0.3",
+    "mypy>=1.8",
+]
+all = ["logan-ai[audio,dev]"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP", "B", "SIM", "RUF"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*", "drivers*", "workers*", "services*", "api*"]

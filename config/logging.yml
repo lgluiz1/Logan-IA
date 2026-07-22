@@ -1,0 +1,43 @@
+# ──────────────────────────────────────────────
+# Logan AI — Configuração de Logging
+# ──────────────────────────────────────────────
+
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  structured:
+    class: "core.logger.StructuredFormatter"
+  human:
+    class: "core.logger.HumanFormatter"
+
+handlers:
+  console:
+    class: "logging.StreamHandler"
+    formatter: "human"
+    stream: "ext://sys.stdout"
+    level: "DEBUG"
+
+  file:
+    class: "logging.handlers.RotatingFileHandler"
+    formatter: "structured"
+    filename: "/app/logs/logan.log"
+    maxBytes: 10485760   # 10MB
+    backupCount: 5
+    encoding: "utf-8"
+    level: "INFO"
+
+loggers:
+  logan:
+    level: "INFO"
+    handlers: ["console", "file"]
+    propagate: false
+
+  logan.event_bus:
+    level: "WARNING"
+
+  logan.scheduler:
+    level: "INFO"
+
+  logan.driver:
+    level: "INFO"

@@ -1,0 +1,12 @@
+{
+    "low_warning": [
+        "{driver_name}, meu nível de combustível está ficando baixo, em {value} por cento. Seria bom abastecer em breve.",
+        "Ei {driver_name}, estou com {value} por cento de combustível. Não é urgente, mas vale ficar atento a um posto.",
+        "{driver_name}, combustível em {value} por cento. Recomendo planejar um abastecimento."
+    ],
+    "low_critical": [
+        "{driver_name}, meu combustível está bem baixo, apenas {value} por cento. Recomendo abastecer na próxima oportunidade.",
+        "{driver_name}, estou com apenas {value} por cento de combustível. Precisamos abastecer logo.",
+        "Combustível crítico, {driver_name}. Apenas {value} por cento restante. Melhor encontrar um posto."
+    ]
+}
