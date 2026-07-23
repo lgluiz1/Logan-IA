@@ -16,6 +16,19 @@ from core.supervisor import Supervisor
 
 async def main() -> None:
     """Inicializa e executa o Logan AI."""
+    # Configura tratador de exceções customizado para Windows (silencia WinError 10054 do Proactor loop)
+    loop = asyncio.get_running_loop()
+    def handle_loop_exception(loop, context):
+        exception = context.get("exception")
+        if (
+            exception
+            and isinstance(exception, ConnectionResetError)
+            and (getattr(exception, "winerror", 0) == 10054 or "10054" in str(exception))
+        ):
+            return
+        loop.default_exception_handler(context)
+    loop.set_exception_handler(handle_loop_exception)
+
     config_dir = os.getenv("LOGAN_CONFIG_DIR", "/app/config")
 
     # Cria Supervisor
